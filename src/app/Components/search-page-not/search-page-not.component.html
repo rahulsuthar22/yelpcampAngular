@@ -1,0 +1,50 @@
+<div class="box container-fluid">
+
+    <!-- NAVIGATION BAR -->
+    <app-navbar></app-navbar>
+
+    <!-- MIDDLE CONTENT -->
+    <div class="row bg-warning bg-opacity-10 py-sm-5 py-3 px-sm-5 px-2 mb-5 ">
+        <h3 class="fw-bold fs-1">Welcome to YelpCamp!</h3>
+        <p>View our hand-picked campgrounds from all over the world, or add your own.</p>
+        <div class="row mb-3 searchBar">
+            <div class="col-auto">
+                <input class="p-1 me-2 rounded" type="text" placeholder="Search" [(ngModel)]="searchTxt">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark">Search</button>
+
+            </div>
+        </div>
+        <a class="add text-underline" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Or add your own
+            campground</a>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <app-new-camp (onAdd)="addNewCamp($event)"></app-new-camp>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div *ngFor="let card of cards | filter: searchTxt">
+                <div>
+                    <div class="col">
+                        <div class="card p-3">
+                            <img src="{{card.url}}" class="card-img-top rounded mb-3" alt="Mount Ulap">
+                            <div class="mb-3">
+                                <h5 class="card-title">{{card.title}}</h5>
+                                <p class="card-text">{{card.desc}}</p>
+                            </div>
+                            <button class="btn btn-outline-dark" routerLink="/individual-camp">View Campground</button>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>

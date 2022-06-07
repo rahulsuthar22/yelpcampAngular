@@ -1,0 +1,87 @@
+*{
+    font-family: "Archivo",sans-serif;
+    box-sizing: border-box;
+}
+.main{
+    padding: 0 0 0 100px;
+    max-width: 60%!important;
+}
+.logo{
+    margin-bottom: 60px;
+}
+.heading{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.side-image{
+    padding: 200px 100px;
+    background-color: #fdf6fd;
+    max-width: 40%;
+    margin-left: 100px;
+}
+.side-image h3{
+    font-size: 25px;
+    line-height: 40px;
+}
+
+label {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #585857;
+}
+/* .is-invalid{
+    border: 2px solid red;
+} */
+
+input {
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.name p{
+    margin: 0;
+}
+.back{
+    text-decoration: none;
+    color: black;
+}
+
+/* media quary */
+
+@media only screen and (max-width:1024px) {
+    
+    .side-image{
+        padding: 100px 40px;
+        margin-left: 100px;
+    }
+
+}
+@media only screen and (max-width:768px) {
+  .side-image{
+      max-width: 100%;
+      margin-left: 0;
+  }  
+  .logo{
+    position: absolute;
+    right: 40px;
+    left: 40px;
+    top: 20px;
+  }
+  .main{
+      max-width: 100%!important;
+      padding: 0 40px;
+      margin: 100px 0 20px 0 ;
+  }
+ 
+}
+@media only screen and (max-width:425px){
+    .heading{
+        font-size: 30px;
+    }
+    .side-image h3{
+        font-size: 20px;
+    }
+}
+
+

@@ -1,0 +1,27 @@
+.modal-dialog {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-title {
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+.modal-header{
+    border-bottom: 0;
+    margin: 50px 0 0 0;
+}
+input{
+    border-radius: 2px;
+    padding: 14px;
+    background: #f3f3f3;
+    border: 0;
+}
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+.addBtn{
+    width:100%
+}

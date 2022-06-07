@@ -1,0 +1,48 @@
+<div class="box d-flex">
+    <div class="main">
+        <div class="navbar logo mt-md-3">
+            <a routerLink=""><img src="../../../assets/images/Logo.svg" alt=""></a>
+            <a class="back" routerLink="/search-page-not">&lt; Back to campgrounds</a>
+        </div>
+        <div class="center-content">
+            <h3 class="heading">Start exploring camps from all around the world.</h3>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+                <label for="text">Username</label>
+                <input type="text" name="username" id="username" formControlName="Username" class="form-control"
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['Username'].errors}"
+                    placeholder="rahul">
+                <div *ngIf="submitted && registerForm.controls['Username'].errors " class="text-danger">
+                    <div *ngIf="submitted && registerForm.controls['Username'].errors['required']">
+                        Username is required
+                    </div>
+                </div>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" formControlName="Password" class="form-control"
+                    [ngClass]="{'is-invalid':submitted && registerForm.controls['Password'].errors}" id="password"
+                    placeholder="Choose Password">
+                <div *ngIf="submitted && registerForm.controls['Password'].errors " class="text-danger">
+                    <div *ngIf="submitted && registerForm.controls['Password'].errors['required']">
+                        Password is required
+                    </div>
+                </div>
+                <button id="submitBtn" type="submit" class="btn btn-dark mb-2">Create an account</button>
+            </form>
+            <p>Already a user? <a routerLink="/login">Sign in</a></p>
+
+        </div>
+    </div>
+    <div class="side-image">
+        <h3 class="mb-3">"YelpCamp has honestly saved me hours of research time, and the camps on here are definitely
+            well picked
+            and added."</h3>
+        <div class="writer d-flex align-items-center">
+            <img class="me-2" src="../../../assets/images/User Testimonial.svg" alt="">
+            <div class="name">
+                <p>May Andrews</p>
+                <p>Professional Hiker</p>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+*{
+    font-family: "Archivo",sans-serif;
+    box-sizing: border-box;
+}
+
+p{
+    color:#585857;
+}
+a.add{
+    color:#585857;
+    /* width: 25%; */
+    cursor: pointer;
+}
+.searchBar div:first-child{
+    padding-right: 0!important;
+}
+.searchBar div:last-child{
+    padding-left: 0!important;
+}
+.card-img-top{
+    width: 100%;
+}
+
+@media(max-width:435px){
+    .searchBar div:first-child{
+       margin-bottom: 10px;
+    }
+    .searchBar div:last-child{
+        padding-left: 1em!important;
+    }
+}

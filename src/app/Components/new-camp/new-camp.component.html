@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form (ngSubmit)="onSubmit()">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Add New Campground</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="campTitle" class="form-label">Campground Name</label>
+                    <input type="text" class="form-control" id="campTitle" name="campTitle"
+                        placeholder="Seven Sister Waterfall" [(ngModel)]="title">
+                </div>
+
+                <div class="mb-3">
+                    <label for="campImage" class="form-label">Image</label>
+                    <input type="text" class="form-control" id="campImage" name="campImage"
+                        placeholder="../../../assets/images/Buloy Springs.jpg" [(ngModel)]="url">
+                </div>
+                <div class="mb-3">
+                    <label for="campDesc" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="campDesc" name="campDesc"
+                        placeholder="this is very pretty place you should always come here and explore this place what fdlohd fjhfndh fhdksbd fhfbfjf fnfnf fjhf"
+                        [(ngModel)]="desc">
+                </div>
+                <button type="submit" class="btn btn-dark addBtn mb-5" data-bs-dismiss="modal">Add Campground</button>
+            </div>
+
+
+        </form>
+    </div>
