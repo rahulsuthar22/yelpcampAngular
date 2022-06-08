@@ -51,7 +51,8 @@ export class SearchPageNotComponent implements OnInit {
     console.log(card);
     this.cards.push(card);
   }
-  // Input() {
-  //   console.log(this.searchTxt);
-  // }
+  onSearch(search: string) {
+    console.log(search);
+    this.searchTxt = search;
+  }
 }

@@ -9,10 +9,10 @@
         <p>View our hand-picked campgrounds from all over the world, or add your own.</p>
         <div class="row mb-3 searchBar">
             <div class="col-auto">
-                <input class="p-1 me-2 rounded" type="text" placeholder="Search" [(ngModel)]="searchTxt">
+                <input class="p-1 me-2 rounded" type="text" #searchText placeholder="Search">
             </div>
             <div class="col-auto">
-                <button class="btn btn-dark">Search</button>
+                <button class="btn btn-dark" (click)="onSearch(searchText.value)">Search</button>
 
             </div>
         </div>
